@@ -43,7 +43,7 @@ module.exports.log = {
   // more information: https://github.com/winstonjs/winston#daily-rotate-file-transport
   dailyRotate: {
     dirname: path.resolve('logs'),
-    datePatern: '.yyyy-MM-dd.log',
+    datePattern: '.yyyy-MM-dd.log',
     filename: pkgJSON.name,
     prettyPrint: true,
     timestamp: true,
