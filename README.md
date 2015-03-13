@@ -62,6 +62,8 @@ module.exports.log = {
 };
 ```
 
+Note how the options are different for each transport. For example, you can use `info` level in console but store `silly` level in MongoDB.
+
 ## License
 
 MIT © [Kiko Beats](http://www.kikobeats.com)
