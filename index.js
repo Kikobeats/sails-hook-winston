@@ -45,7 +45,7 @@ module.exports = function(sails) {
       sails.config.log.custom = logger;
 
       log = captain(sails.config.log);
-      log.ship = buildShipFn(sails.version ?('v' + sails.version) :'', log.info );
+      log.ship = buildShipFn(sails.version ? ('v' + sails.version) :'', log.info );
       sails.log = log;
       return done();
     }
