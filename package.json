@@ -1,0 +1,37 @@
+{
+  "name": "sails-hook-winston",
+  "description": "Integrates winston logging system with your Sails application",
+  "version": "0.1.0",
+  "author": {
+    "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
+    "url": "https://github.com/Kikobeats"
+  },
+  "bugs": {
+    "url": "Kikobeats/sails-hook-winston/issues"
+  },
+  "dependencies": {
+    "mkdirp": "*",
+    "winston-mongodb": "*"
+  },
+  "devDependencies": {
+    "sails": "~0.11.0",
+    "should": "*",
+    "mocha": "*"
+  },
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">= 1.4.0"
+  },
+  "homepage": "Kikobeats/sails-hook-winston",
+  "keywords": ["sails", "hooks", "winston", "logging"],
+  "license": "MIT",
+  "main": "./index.js",
+  "repository": "Kikobeats/sails-hook-winston",
+  "scripts": {
+    "test": "sh test/test.sh"
+  },
+  "sails": {
+    "isHook": true
+  }
+}
