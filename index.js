@@ -42,6 +42,13 @@ module.exports = function(sails) {
         logger.add(require('winston-mongodb').MongoDB, sails.config.log.mongoDB);
       }
 
+      // Add more transports, see here for more https://github.com/winstonjs/winston/blob/master/docs/transports.md
+      if (Object.prototype.toString.call(sails.config.log.transports) === '[object Array]' && sails.config.log.transports.length > 0) {
+        sails.config.log.transports.forEach(function (transport) {
+          logger.add(transport.module, transport.config || {});
+        });
+      }
+
       sails.config.log.custom = logger;
 
       log = captain(sails.config.log);

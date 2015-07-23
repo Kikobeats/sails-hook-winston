@@ -51,14 +51,27 @@ module.exports.log = {
   },
 
   // unlock mongoDB transport!
-  // more information: https://github.com/winstonjs/winston#mongodb-transport
+  // more information: https://github.com/winstonjs/winston/blob/master/docs/transports.md#mongodb-transport
   mongoDB: {
     level: 'silly',
     db: pkgJSON.name,
     collection: 'logs',
     host: 'localhost',
     port: 27017
-  }
+  },
+
+  // Add more transports
+  // see here for more: https://github.com/winstonjs/winston/blob/master/docs/transports.md
+  transports: [
+    {
+      module: require('winston-logio').Logio,
+      config: {
+        port: 28777,
+        node_name: pkgJSON.name,
+        host: '127.0.0.1'
+      }
+    }
+  ]
 };
 ```
 
