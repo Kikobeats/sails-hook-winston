@@ -24,6 +24,7 @@ At this moment, the transport supported are:
 - Console (by default based in the Sails log options).
 - [DailyLogRotate](https://github.com/winstonjs/winston#daily-rotate-file-transport).
 - [MongoDB](https://github.com/winstonjs/winston#mongodb-transport).
+- [Customs Transports](https://github.com/winstonjs/winston/blob/master/docs/transports.md)
 
 ## API
 
@@ -60,8 +61,8 @@ module.exports.log = {
     port: 27017
   },
 
-  // Add more transports
-  // see here for more: https://github.com/winstonjs/winston/blob/master/docs/transports.md
+  // unlock custom transport!
+  // more information: https://github.com/winstonjs/winston/blob/master/docs/transports.md
   transports: [
     {
       module: require('winston-logio').Logio,
