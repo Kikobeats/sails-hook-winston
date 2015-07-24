@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "mkdirp": "*",
+    "winston": "*",
     "winston-mongodb": "*"
   },
   "devDependencies": {
