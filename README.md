@@ -1,9 +1,9 @@
 # sails-hook-winston
 
-[![Build Status](http://img.shields.io/travis/Kikobeats/sails-hook-rotate-log/master.svg?style=flat)](https://travis-ci.org/Kikobeats/sails-hook-rotate-log)
-[![Dependency status](http://img.shields.io/david/Kikobeats/sails-hook-rotate-log.svg?style=flat)](https://david-dm.org/Kikobeats/sails-hook-rotate-log)
-[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/sails-hook-rotate-log.svg?style=flat)](https://david-dm.org/Kikobeats/sails-hook-rotate-log#info=devDependencies)
-[![NPM Status](http://img.shields.io/npm/dm/sails-hook-rotate-log.svg?style=flat)](https://www.npmjs.org/package/sails-hook-rotate-log)
+[![Build Status](http://img.shields.io/travis/Kikobeats/sails-hook-winston/master.svg?style=flat)](https://travis-ci.org/Kikobeats/sails-hook-winston)
+[![Dependency status](http://img.shields.io/david/Kikobeats/sails-hook-winston.svg?style=flat)](https://david-dm.org/Kikobeats/sails-hook-winston)
+[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/sails-hook-winston.svg?style=flat)](https://david-dm.org/Kikobeats/sails-hook-winston#info=devDependencies)
+[![NPM Status](http://img.shields.io/npm/dm/sails-hook-winston.svg?style=flat)](https://www.npmjs.org/package/sails-hook-winston)
 [![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat)](https://www.gittip.com/Kikobeats/)
 
 > Integrates winston logging system with your Sails application.
