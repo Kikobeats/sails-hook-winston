@@ -1,7 +1,7 @@
 {
   "name": "sails-hook-winston",
   "description": "Integrates winston logging system with your Sails application",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
@@ -25,7 +25,12 @@
     "npm": ">= 1.4.0"
   },
   "homepage": "Kikobeats/sails-hook-winston",
-  "keywords": ["sails", "hooks", "winston", "logging"],
+  "keywords": [
+    "sails",
+    "hooks",
+    "winston",
+    "logging"
+  ],
   "license": "MIT",
   "main": "./index.js",
   "repository": "Kikobeats/sails-hook-winston",
