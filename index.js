@@ -37,7 +37,7 @@ module.exports = function(sails) {
       // DailyRotateFile Transport
       if (sails.config.log.dailyRotate) {
         mkdirp.sync(sails.config.log.dailyRotate.dirname);
-        logger.add(winston.transports.DailyRotateFile, (sails.config.log.dailyRotate));
+        logger.add(require('winston-daily-rotate-file'), (sails.config.log.dailyRotate));
       }
 
       // MongoDB Transport
