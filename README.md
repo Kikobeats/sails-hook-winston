@@ -23,7 +23,6 @@ At this moment, the transport supported are:
 
 - Console (by default based in the Sails log options).
 - [DailyLogRotate](https://github.com/winstonjs/winston#daily-rotate-file-transport).
-- [MongoDB](https://github.com/winstonjs/winston#mongodb-transport).
 - [Customs Transports](https://github.com/winstonjs/winston/blob/master/docs/transports.md).
 
 ## API
@@ -49,16 +48,6 @@ module.exports.log = {
     prettyPrint: true,
     timestamp: true,
     level: 'silly'
-  },
-
-  // unlock mongoDB transport!
-  // more information: https://github.com/winstonjs/winston/blob/master/docs/transports.md#mongodb-transport
-  mongoDB: {
-    level: 'silly',
-    db: pkgJSON.name,
-    collection: 'logs',
-    host: 'localhost',
-    port: 27017
   },
 
   // unlock custom transport!

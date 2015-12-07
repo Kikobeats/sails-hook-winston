@@ -40,10 +40,6 @@ module.exports = function(sails) {
         logger.add(require('winston-daily-rotate-file'), (sails.config.log.dailyRotate));
       }
 
-      // MongoDB Transport
-      if (sails.config.log.mongoDB)
-        logger.add(require('winston-mongodb').MongoDB, sails.config.log.mongoDB);
-
       // Custom Transport
       // More information: https://github.com/winstonjs/winston/blob/master/docs/transports.md
       if (Object.prototype.toString.call(sails.config.log.transports) === '[object Array]' && sails.config.log.transports.length > 0) {
