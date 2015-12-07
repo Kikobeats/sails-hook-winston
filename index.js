@@ -34,12 +34,6 @@ module.exports = function(sails) {
       // Console Transport
       logger = new winston.Logger({transports: [new winston.transports.Console(consoleOptions)]});
 
-      // DailyRotateFile Transport
-      if (sails.config.log.dailyRotate) {
-        mkdirp.sync(sails.config.log.dailyRotate.dirname);
-        logger.add(require('winston-daily-rotate-file'), (sails.config.log.dailyRotate));
-      }
-
       // Custom Transport
       // More information: https://github.com/winstonjs/winston/blob/master/docs/transports.md
       if (Object.prototype.toString.call(sails.config.log.transports) === '[object Array]' && sails.config.log.transports.length > 0) {

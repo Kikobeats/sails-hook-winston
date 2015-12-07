@@ -12,8 +12,7 @@
   },
   "dependencies": {
     "mkdirp": "*",
-    "winston": "^2.1.0",
-    "winston-daily-rotate-file": "^1.0.1"
+    "winston": "^2.1.0"
   },
   "devDependencies": {
     "sails": "~0.11.0",
