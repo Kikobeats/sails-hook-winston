@@ -13,6 +13,7 @@ module.exports = function(sails) {
       var log;
       var logger;
       var consoleOptions;
+      var captainsOptions = sails.config.log;
 
       consoleOptions = {
         level: sails.config.log.level,
@@ -44,7 +45,8 @@ module.exports = function(sails) {
 
       sails.config.log.custom = logger;
 
-      log = captain(sails.config.log);
+      captainsOptions.custom = logger;
+      log = captain(captainsOptions);
       log.ship = buildShipFn(sails.version ? ('v' + sails.version) : '', log.info);
       sails.log = log;
       return done();
