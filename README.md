@@ -17,14 +17,10 @@ npm install sails-hook-winston
 ```
 ## Usage
 
-[winston](https://github.com/winstonjs/winston) is one of the most powerful logging libraries for NodeJS. You can unlock the feature of winston in your Sails application when you use this hook, in special use different transport.
+[winston](https://github.com/winstonjs/winston) is one of the most powerful logging libraries for NodeJS. You can unlock the features of winston in your Sails application when you use this hook.
 
-At this moment, the transport supported are:
-
-- Console (by default based in the Sails log options).
-- [DailyLogRotate](https://github.com/winstonjs/winston#daily-rotate-file-transport).
-- [MongoDB](https://github.com/winstonjs/winston#mongodb-transport).
-- [Customs Transports](https://github.com/winstonjs/winston/blob/master/docs/transports.md).
+All [available winston transports](https://github.com/winstonjs/winston/blob/master/docs/transports.md) can be configured through the `transports` option.
+The console transport is included by default (by default based on the Sails log options).
 
 ## API
 
@@ -40,30 +36,20 @@ module.exports.log = {
   level: 'silly', // you are familiar with this value, right?
   timestamp: true, // if you want to output the timestamp in the console transport
 
-  // unlock dailyRorate transport!
-  // more information: https://github.com/winstonjs/winston#daily-rotate-file-transport
-  dailyRotate: {
-    dirname: path.resolve('logs'),
-    datePattern: '.yyyy-MM-dd.log',
-    filename: pkgJSON.name,
-    prettyPrint: true,
-    timestamp: true,
-    level: 'silly'
-  },
-
-  // unlock mongoDB transport!
-  // more information: https://github.com/winstonjs/winston/blob/master/docs/transports.md#mongodb-transport
-  mongoDB: {
-    level: 'silly',
-    db: pkgJSON.name,
-    collection: 'logs',
-    host: 'localhost',
-    port: 27017
-  },
-
-  // unlock custom transport!
+  // Transports
   // more information: https://github.com/winstonjs/winston/blob/master/docs/transports.md
   transports: [
+    {
+      module: require('winston-daily-rotate-file'),
+      config: {
+        dirname: path.resolve('logs'),
+        datePattern: '.yyyy-MM-dd.log',
+        filename: pkgJSON.name,
+        prettyPrint: true,
+        timestamp: true,
+        level: 'silly'
+      }
+    },
     {
       module: require('winston-logio').Logio,
       config: {
@@ -76,7 +62,7 @@ module.exports.log = {
 };
 ```
 
-Note how the options are different for each transport. For example, you can use `info` level in console but store `silly` level in MongoDB.
+Note how the options are different for each transport. For example, you can use `info` level in console but store `silly` level in DailyFileRotate.
 
 ## License
 
