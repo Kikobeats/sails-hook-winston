@@ -1,6 +1,7 @@
 import winston from 'winston';
 import captain from 'captains-log';
 import buildShipFn from 'sails/lib/hooks/logger/ship';
+import moment from 'moment';
 
 export default function (sails) {
   return {
@@ -13,7 +14,11 @@ export default function (sails) {
       let consoleOptions = {
         level: sails.config.log.level,
         formatter: options => {
-          let message = sails.config.log.timestamp ? new Date().toLocaleString() + ' ' : '';
+          let message = '';
+          if(sails.config.log.timestamp){
+            message = sails.config.log.timestampFormat ? moment().format(sails.config.log.timestampFormat) : moment().format('LLLL');
+            message += ' ';
+          }
           message += options.message || '';
           message += (options.meta && Object.keys(options.meta).length ? '\n\t' + JSON.stringify(options.meta) : '');
           return message;
