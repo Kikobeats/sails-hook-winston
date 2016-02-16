@@ -1,6 +1,7 @@
 # sails-hook-winston
 
 [![Build Status](http://img.shields.io/travis/Kikobeats/sails-hook-winston/master.svg?style=flat)](https://travis-ci.org/Kikobeats/sails-hook-winston)
+[![Coverage Status](https://coveralls.io/repos/github/Kikobeats/sails-hook-winston/badge.svg?branch=master)](https://coveralls.io/github/Kikobeats/sails-hook-winston?branch=master)
 [![Dependency status](http://img.shields.io/david/Kikobeats/sails-hook-winston.svg?style=flat)](https://david-dm.org/Kikobeats/sails-hook-winston)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/sails-hook-winston.svg?style=flat)](https://david-dm.org/Kikobeats/sails-hook-winston#info=devDependencies)
 [![NPM Status](http://img.shields.io/npm/dm/sails-hook-winston.svg?style=flat)](https://www.npmjs.org/package/sails-hook-winston)
