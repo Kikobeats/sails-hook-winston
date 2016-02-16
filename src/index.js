@@ -15,10 +15,12 @@ export default function (sails) {
         level: sails.config.log.level,
         formatter: options => {
           let message = '';
-          if(sails.config.log.timestamp){
+
+          if (sails.config.log.timestamp) {
             message = sails.config.log.timestampFormat ? moment().format(sails.config.log.timestampFormat) : moment().format('LLLL');
             message += ' ';
           }
+
           message += options.message || '';
           message += (options.meta && Object.keys(options.meta).length ? '\n\t' + JSON.stringify(options.meta) : '');
           return message;
