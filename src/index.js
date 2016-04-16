@@ -28,7 +28,17 @@ export default function (sails) {
       };
 
       // Console Transport
-      logger = new winston.Logger({transports: [new winston.transports.Console(consoleOptions)]});
+      logger = new winston.Logger({
+        transports: [new winston.transports.Console(consoleOptions)],
+        levels: {
+          error: 1,
+          warn: 2,
+          debug: 3,
+          info: 4,
+          verbose: 5,
+          silly: 6
+        }
+      });
 
       // Custom Transport
       // More information: https://github.com/winstonjs/winston/blob/master/docs/transports.md
