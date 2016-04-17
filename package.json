@@ -1,7 +1,7 @@
 {
   "name": "sails-hook-winston",
   "description": "Integrates winston logging system with your Sails application",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "lib/index.js",
   "repository": "Kikobeats/sails-hook-winston",
